@@ -27,12 +27,16 @@ export class TranscrevaClient {
     this.apiKey = apiKey || process.env.TRANSCREVA_API_KEY || '';
     this.baseUrl = (baseUrl || process.env.TRANSCREVA_URL || 'https://transcreva.net').replace(/\/+$/, '');
     this.fetch = fetchImpl || globalThis.fetch;
+  }
+
+  _requireKey() {
     if (!this.apiKey) {
       throw new Error('TRANSCREVA_API_KEY is required. Generate one at https://transcreva.net/conta');
     }
   }
 
   async _apiJson(path, init = {}) {
+    this._requireKey();
     const res = await this.fetch(`${this.baseUrl}${path}`, {
       ...init,
       headers: {
@@ -70,6 +74,7 @@ export class TranscrevaClient {
   }
 
   async exportTranscription(id, { format = 'txt', timestamps = true, speakers = true } = {}) {
+    this._requireKey();
     const q = new URLSearchParams({
       format,
       timestamps: String(timestamps),
