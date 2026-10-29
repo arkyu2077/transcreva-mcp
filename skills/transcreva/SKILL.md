@@ -56,3 +56,14 @@ npx -y transcreva-mcp quota
      -H "Content-Type: application/json" \
      -d '{"title": "Entrevista Final", "speakers": [{"id": "S1", "label": "João Silva"}]}'
    ```
+
+## Links
+
+- Website: [transcreva.net](https://transcreva.net)
+- Pricing: [transcreva.net/precos](https://transcreva.net/precos)
+- WhatsApp Audio to Text: [transcreva.net/transcrever-audio-whatsapp](https://transcreva.net/transcrever-audio-whatsapp)
+- Video to Text: [transcreva.net/transcrever-video](https://transcreva.net/transcrever-video)
+- Automatic Subtitle Generator (SRT/VTT): [transcreva.net/gerar-legenda-automatica](https://transcreva.net/gerar-legenda-automatica)
+- Interview Transcription: [transcreva.net/transcricao-de-entrevista](https://transcreva.net/transcricao-de-entrevista)
+- Audio Degravação: [transcreva.net/degravacao-de-audio](https://transcreva.net/degravacao-de-audio)
+- LLM Index: [transcreva.net/llms.txt](https://transcreva.net/llms.txt)
