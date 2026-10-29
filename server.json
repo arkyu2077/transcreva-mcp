@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.arkyu2077/transcreva",
+  "title": "Transcreva",
+  "description": "Brazilian Portuguese audio and video transcription with speaker diarization and SRT/VTT/DOCX export.",
+  "version": "1.0.0",
+  "websiteUrl": "https://transcreva.net",
+  "repository": {
+    "url": "https://github.com/arkyu2077/transcreva-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://transcreva.net/apple-touch-icon.png",
+      "mimeType": "image/png",
+      "sizes": ["180x180"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://transcreva.net/api/mcp"
+    }
+  ]
+}

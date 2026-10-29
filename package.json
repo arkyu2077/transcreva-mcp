@@ -1,0 +1,47 @@
+{
+  "name": "transcreva-mcp",
+  "version": "1.0.0",
+  "description": "MCP server, CLI, and Agent Skill for Transcreva (https://transcreva.net): transcribe audio and video in Brazilian Portuguese with speaker diarization and TXT/SRT/VTT/DOCX export.",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "transcreva",
+    "transcription",
+    "transcricao-de-audio",
+    "portuguese",
+    "pt-br",
+    "subtitles",
+    "srt",
+    "vtt",
+    "whatsapp-audio",
+    "agent-skills"
+  ],
+  "homepage": "https://transcreva.net",
+  "bugs": "https://github.com/arkyu2077/transcreva-mcp/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkyu2077/transcreva-mcp.git"
+  },
+  "license": "MIT",
+  "author": "Transcreva <contato@transcreva.net> (https://transcreva.net)",
+  "type": "module",
+  "bin": {
+    "transcreva": "bin/transcreva.mjs",
+    "transcreva-mcp": "bin/transcreva-mcp.mjs"
+  },
+  "main": "bin/transcreva.mjs",
+  "exports": {
+    ".": "./bin/transcreva.mjs",
+    "./mcp": "./bin/transcreva-mcp.mjs"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "server.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
