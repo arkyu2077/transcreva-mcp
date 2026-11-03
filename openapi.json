@@ -1,0 +1,152 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Transcreva API",
+    "version": "1.0.1",
+    "description": "API REST e servidor Model Context Protocol (MCP) do Transcreva (https://transcreva.net) para transcrição de áudio e vídeo em português do Brasil com identificação de falantes (diarização) e exportação em TXT, DOCX, SRT e VTT.",
+    "contact": {
+      "name": "Transcreva Support",
+      "url": "https://transcreva.net",
+      "email": "contato@transcreva.net"
+    },
+    "x-logo": {
+      "url": "https://transcreva.net/apple-touch-icon.png"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://transcreva.net/api/v1",
+      "description": "Production API"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Token de API gerado em https://transcreva.net"
+      }
+    }
+  },
+  "paths": {
+    "/transcriptions": {
+      "post": {
+        "operationId": "createTranscription",
+        "summary": "Enviar áudio ou vídeo para transcrição em português do Brasil",
+        "description": "Cria uma tarefa de transcrição a partir de um arquivo ou URL de mídia (MP3, M4A, WAV, OGG/Opus do WhatsApp, MP4, MOV, WebM) com pontuação automática, timestamps e diarização de falantes.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "media_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL pública ou pré-assinada do arquivo de áudio ou vídeo"
+                  },
+                  "language": {
+                    "type": "string",
+                    "default": "pt-BR",
+                    "description": "Idioma do áudio (padrão: pt-BR)"
+                  },
+                  "diarize": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Ativar separação automática de locutores (Locutor 1, Locutor 2)"
+                  }
+                },
+                "required": [
+                  "media_url"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tarefa de transcrição criada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "queued",
+                        "processing",
+                        "completed",
+                        "failed"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transcriptions/{id}": {
+      "get": {
+        "operationId": "getTranscription",
+        "summary": "Consultar status e resultado da transcrição",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Detalhes e segmentos da transcrição",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "srt_url": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "vtt_url": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "docx_url": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
