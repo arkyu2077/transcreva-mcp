@@ -127,3 +127,11 @@ node bin/transcreva.mjs list --search "reunião"
 ## License
 
 MIT © SailorFlow LLC ([transcreva.net](https://transcreva.net))
+
+
+## Guias Práticos em Português (GitHub Pages)
+
+- [Como Transcrever Áudio do WhatsApp em Texto Grátis (OGG, OPUS e M4A)](https://arkyu2077.github.io/transcreva-mcp/guias/como-transcrever-audio-whatsapp-em-texto.html)
+- [Degravação de Áudio Jurídico e Transcrição de Entrevistas com Identificação de Falantes](https://arkyu2077.github.io/transcreva-mcp/guias/degravacao-de-audio-juridico-e-entrevistas.html)
+- [Como Converter Vídeo em Texto e Gerar Legenda Automática SRT e VTT em Português](https://arkyu2077.github.io/transcreva-mcp/guias/gerar-legenda-automatica-srt-vtt-video-para-texto.html)
+- [Como Integrar Transcrição de Áudio em Português no Claude Code, Cursor e Node.js via MCP](https://arkyu2077.github.io/transcreva-mcp/guias/api-e-mcp-de-transcricao-em-portugues.html)
