@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "transcreva": {
+      "type": "http",
+      "url": "https://transcreva.net/mcp"
+    }
+  }
+}

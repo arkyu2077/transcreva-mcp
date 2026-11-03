@@ -1,0 +1,26 @@
+{
+  "name": "transcreva",
+  "owner": {
+    "name": "Transcreva",
+    "url": "https://transcreva.net"
+  },
+  "metadata": {
+    "description": "Transcrição de áudio e vídeo em texto em português do Brasil com identificação de falantes e exportação TXT, DOCX, SRT e VTT.",
+    "homepage": "https://transcreva.net"
+  },
+  "plugins": [
+    {
+      "name": "transcreva",
+      "description": "Brazilian Portuguese audio and video transcription with speaker diarization and SRT/VTT/DOCX export via Transcreva MCP.",
+      "version": "1.0.1",
+      "author": {
+        "name": "Transcreva",
+        "url": "https://transcreva.net"
+      },
+      "homepage": "https://transcreva.net",
+      "repository": "https://github.com/arkyu2077/transcreva-mcp",
+      "category": "Productivity",
+      "source": "./plugins/transcreva"
+    }
+  ]
+}

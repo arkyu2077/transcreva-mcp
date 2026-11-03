@@ -1,0 +1,22 @@
+{
+  "name": "transcreva",
+  "version": "1.0.1",
+  "description": "Brazilian Portuguese audio and video transcription with speaker diarization and SRT/VTT/DOCX export.",
+  "author": {
+    "name": "Transcreva",
+    "url": "https://transcreva.net"
+  },
+  "homepage": "https://transcreva.net",
+  "repository": "https://github.com/arkyu2077/transcreva-mcp",
+  "license": "MIT",
+  "keywords": [
+    "transcription",
+    "speech-to-text",
+    "portuguese",
+    "whatsapp-audio",
+    "srt",
+    "mcp"
+  ],
+  "skills": "../../skills/",
+  "mcpServers": "./.mcp.json"
+}
