@@ -1,0 +1,8 @@
+site_name: Transcreva — Portuguese (PT-BR & PT-PT) AI Audio & Video Transcription Docs
+site_url: https://transcreva.net/
+repo_url: https://github.com/arkyu2077/transcreva-mcp
+site_description: Official developer & workflow documentation for Transcreva (transcreva.net) — Portuguese (PT-BR & PT-PT) AI Audio & Video Transcription, WhatsApp Voice Notes to Text, Speaker Diarization, and SRT/VTT Subtitles.
+nav:
+  - Home & Overview: index.md
+  - WhatsApp Audio & MP3 Transcription: whatsapp-mp3.md
+  - Academic Interviews (ABNT) & Subtitles: interviews-subtitles.md
